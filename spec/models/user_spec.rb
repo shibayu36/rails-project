@@ -1,5 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'factory bot test' do
+    let(:user) { create(:user) }
+
+    it 'creates record' do
+      expect(user.id).to be_present
+    end
+  end
 end
